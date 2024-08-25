@@ -11,6 +11,7 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import { CircleUserRound } from "lucide-react";
+import Link from "next/link";
 
 export function Heronavbar() {
   return (
@@ -20,9 +21,13 @@ export function Heronavbar() {
           <MenubarTrigger>
             <CircleUserRound />
           </MenubarTrigger>
-          <MenubarContent className="w-fit">
-            <MenubarItem>New Tab</MenubarItem>
-            <MenubarItem>New Tab</MenubarItem>
+          <MenubarContent>
+            <MenubarItem>
+              <Link className="w-full" href="/sign-in">Sign In</Link>
+            </MenubarItem>
+            <MenubarItem>
+              <Link className="w-full" href="/sign-up">Sign Up</Link>
+            </MenubarItem>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
